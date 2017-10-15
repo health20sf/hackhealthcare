@@ -12,6 +12,14 @@
 
 * https://gist.github.com/bfortuner/5f16fdb4f95a98db938d63b8c496ed96
 
+## Cryptocurrency
+
+* https://github.com/ytsheng/healai
+
+## Federated Learning
+
+* https://github.com/bfortuner/pytorch-federated-learning
+
 > A Vue.js project
 
 ## Build Setup
