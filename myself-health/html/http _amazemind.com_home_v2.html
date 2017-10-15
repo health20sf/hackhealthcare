@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/am.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <link href="css/hackHealthcare.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+  
+   <script type="text/javascript">
+   var api_key = 'CODE_SAMPLES_KEY_9d3608187'; // Get your API key at developer.betterdoctor.com
+var resource_url = 'https://api.betterdoctor.com/2016-03-01/conditions?user_key=' + api_key;
+$.get(resource_url, function (data) {
+    // data: { meta: {<metadata>}, data: {<array[Condition]>} }
+    
+    var template = Handlebars.compile(document.getElementById('conditions-template').innerHTML);
+    document.getElementById('content-placeholder').innerHTML = template(data);
+});
+   </script>
+</head>
+<body>
+<h3>BetterDoctor - Conditions</h3>
+<div id="content-placeholder"></div>
+<script id="conditions-template" type="text/x-handlebars-template">
+    <table>
+        <thead>
+        <th>Name</th>
+        <th>uid</th>
+       
+        </thead>
+        <tbody>
+        {{#data}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{uid}}</td>
+            
+            
+        </tr>
+        {{/data}}
+        </tbody>
+    </table>
+</script>
+
+
+<div id="footer" align="center">
+<a href="home.html" target="_parent">Home</a>&nbsp;|&nbsp; 
+<a href="siteMap.html" target="_parent">Site Map</a></div>
+<br class="clearfloat" />&nbsp;
+
+<div align="center" id="copyright">Copyright &copy; MMVIII-XV &nbsp;      
+<a href="http://www.AmazeMind.com/" target="_blank">AmazeMind.com</a>. &nbsp;All Rights Reserved. 
+</div>
+
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"../SpryAssets/SpryMenuBarDownHover.gif", imgRight:"../SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4721571-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body><!-- InstanceEnd --></html>

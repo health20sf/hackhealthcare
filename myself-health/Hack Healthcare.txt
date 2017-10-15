@@ -1,0 +1,46 @@
+Yelp Fusion API, GraphQL
+
+Search, phone search, transaction search, business, reviews (up to 3 businesses)
+Autocomplete, business match (beta)
+Event search - get event id
+featured event - events chosen by community managers
+
+data = urlencode(
+{'client_id': $CLIENT_ID, 'client_secret': $CLIENT_SECRET, 'grant_type': })
+(we'll assume the instructions are online somewhere)
+
+call search endpoint in python  
+url, headers, response
+disaster response - user location, need emergency / medical attention, is road closed
+shelter - shelter location, facilities (break out), full / % full, medical facilities
+https://www.airbnb.com/welcome/evacuees/northerncaliforniafireevacuees
+
+GraphQL -query language for APIs; not a replacement for Rest APIs. So, what is a Rest API?
+GraphQL better when only a few bits of information needed
+github.com/Yelp/yelp-fusion
+improving the quality of review data on doctors on Yelp?
+
+
+
+myself.health
+
+Credentials
+
+App name
+    myself.health's App
+Key
+    1a960344ac9841572538a22f90a3f25f
+
+    Add this as a user_key parameter to your API calls to authenticate.
+
+
+Install a local webserver.
+Install MySQL.
+Install a mailserver.
+Clone the database for myself.health users.
+Create a PHP web form to create new users.
+Create a PHP web form to create new trials.
+Create a login/password form.
+How do you https encrypt?
+Buy a fitbit and start tracking data.
+Use the fitbit API to pull data like daily weight.
