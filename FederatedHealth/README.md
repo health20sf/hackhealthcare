@@ -2,7 +2,7 @@
 
 ## Slides
 
-* https://drive.google.com/file/d/0BzcOrwhVzhVmalNzNlk0ZlNHRWs/view
+* https://docs.google.com/presentation/d/1GA-6T54mmd2k7uWwLfqOOvToIuSjqx4jyR6q87M5S98
 
 ## Demo
 
