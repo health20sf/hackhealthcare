@@ -8,6 +8,10 @@
 
 * http://federatedhealth.s3-website-us-west-1.amazonaws.com
 
+## Config YAML
+
+* https://gist.github.com/bfortuner/5f16fdb4f95a98db938d63b8c496ed96
+
 > A Vue.js project
 
 ## Build Setup
