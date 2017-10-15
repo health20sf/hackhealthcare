@@ -1,0 +1,121 @@
+
+	body, html {
+	    height: 100%;
+	    margin: 0;
+	}
+
+	.bg {
+	    /* The image used */
+	    background-image: url("../images/img_cancer.jpg");
+
+	    /* Full height */
+	    height: 100%; 
+
+	    /* Center and scale the image nicely */
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    opacity: 0.7;
+	}
+
+	#home-text {
+		text-align: center;
+		font-size: 1.4em;
+		background-color: #939393;
+		color: black;
+		
+		position: relative;
+    	left: 25%;
+    	top: 15%;
+    	height: 25%;
+		width: 50%;
+    	opacity: 0.75;
+	}
+
+	p.main-text {
+		text-align: center;
+		font-size: 1.4em;
+		font-weight: bold;
+	}
+
+	#get-started{
+		opacity: 0.99 !important;	
+		/*margin-top: 50%;
+		margin-left: 50%;*/
+		position: relative;
+    	left: 45%;
+    	top: 40%;
+	}
+
+	.qs{
+		font-size: 1.1em;
+	}
+
+	#qs-cancer-when{
+		padding-left: 15px;
+	}
+
+	#qs-cancer-when-inp{
+		padding-left: 0px;
+	}
+
+	.well {
+	    /*background: #FAFAFA !important;*/
+	    border-radius: 10px !important;
+	}
+
+	.well-results {
+	    /*background: #FAFAFA !important;*/
+	    margin-top: 10px;
+	    background-image: url("../images/result_back.png") !important;
+	    /*background: #9BC2CF !important;*/
+	    border-radius: 10px !important;
+	    padding: 10px;
+	    border: 1px solid;
+	    border-color: #D3D3D3;
+	}
+
+	#result-text{
+		text-align: center;
+		font-size: 1.5em;
+	}
+
+	#result-text-percent{
+		text-align: center;
+		font-size: 1.6em;
+		font-weight: bold;
+		/*background: pink !important;*/
+		height: 25%;
+		width: 25%;
+		position: relative;
+		left: 37%;
+	}
+
+	.well-next-steps {
+	    /*background: #FAFAFA !important;*/
+	    margin-top: 10px;
+	    background: #bff2bf !important;
+	    border-radius: 10px !important;
+	    padding: 10px;
+	    border: 1px solid;
+	    border-color: #D3D3D3;
+	}
+
+	.next-steps-headers{
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+
+	.next-steps-text{
+		font-size: 1.2em;
+	}
+
+	.table-bordered{
+		border-style: solid !important;
+		border-width: 2px !important;
+		border-color: black;
+	}
+
+	.btn-primary.active {
+	    background-color: #FF69B4 !important;
+	}
