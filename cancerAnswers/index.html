@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' />
+	<link rel='stylesheet' href='./css/style.css' />
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  			crossorigin="anonymous"></script>
+  	<script src="./javascript/json-data.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('a').click(function(){
+			    $('html, body').animate({
+			        scrollTop: $( $(this).attr('href') ).offset().top
+			    }, 500);
+			    console.log('hi');
+			    return false;
+			});
+
+			$(document).on('click','#termsCB',function(e){
+			    if($('#termsCB').prop("checked")===true){
+			    	//console.log('Yes');
+			    	$('#btn-submit').prop('disabled', false);
+
+			    }
+			    else{
+			    	//console.log('No');
+			    	$('#btn-submit').prop('disabled', true);
+			    }
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<div class="bg">
+		<div id="home-text" text-align="center">
+			<p class='main-text'>Time is precious when you or a loved one has been diagnosed with cancer. 
+
+			<p>How much time do you have left and what are your options? Using evidence available from the National Cancer Institute, Harvard, and MIT, we can help answer these questions.</p>
+		</div>
+		<div id="get-started">
+			<a href="#getStartedLink">
+				<button type="button" class="btn btn-success btn-lg">Get Started</button>
+			</a>
+		</div>
+	</div>
+	<br/>
+	<div id="getStartedLink" class="container-fluid">
+		<div class="well well-lg">
+			<div id="qs-cancer-type">
+				<p class='qs'>What type of cancer do you have?</p>
+				<div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-primary active">
+				    <input type="radio" name="options" id="option1" autocomplete="off" checked> Breast
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option2" autocomplete="off"> Lung
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> Prostate
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> Colon
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> Skin
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> Other
+				  </label>
+				</div>
+				<!--<button id="btn-breast" type="button" class="btn btn-success ">Breast</button>
+				<button id="btn-lung" type="button" class="btn btn-success ">Lung</button>
+				<button id="btn-prostate" type="button" class="btn btn-success ">Prostate</button>
+				<button id="btn-colon" type="button" class="btn btn-success ">Colon</button>
+				<button id="btn-skin" type="button" class="btn btn-success ">Skin</button>-->
+			</div>
+
+			<br/>
+			<div id="qs-cancer-when" class="row">
+				<p class='qs'>When were you diagnosed?</p>
+				
+			    <div class="col-sm-4" id="qs-cancer-when-inp"/>
+			    	<input type="text" class="form-control" id="diagDate" placeholder="mm/yyyy"/>
+			    </div>
+			</div>
+			<br/>
+
+			<div id="qs-cancer-type">
+				<p class='qs'>How old are you?</p>
+				<div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-primary active">
+				    <input type="radio" name="options" id="option1" autocomplete="off" checked>Younger than 20
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option2" autocomplete="off"> 20-49
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> 50-64
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> 65-74
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> Older than 75
+				  </label>
+				</div>
+			</div>
+
+			<br/>
+			<div id="qs-cancer-type">
+				<p class='qs'>What is your sex?</p>
+				<div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-primary active">
+				    <input type="radio" name="options" id="option1" autocomplete="off" checked> Male
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option2" autocomplete="off"> Female
+				  </label>
+				</div>
+			</div>
+
+			<br/>
+			<div id="qs-cancer-type">
+				<p class='qs'>Which of the following races do you identify with most closely?</p>
+				<div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-primary active">
+				    <input type="radio" name="options" id="option1" autocomplete="off" checked> White
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option2" autocomplete="off"> Black
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option2" autocomplete="off"> Other
+				  </label>
+				</div>
+			</div>
+
+			<br/>
+			<div id="qs-cancer-type">
+				<p class='qs'>What is your stage?</p>
+				<div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-primary active">
+				    <input type="radio" name="options" id="option1" autocomplete="off" checked> Stage 1
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option2" autocomplete="off"> Stage 2
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> Stage 3
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> Stage 4
+				  </label>
+				</div>
+			</div>
+
+			<br/>
+			<div id="qs-cancer-mut">
+				<p class='qs'>Do you have one of the following known genetic mutations?</p>
+				<div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-primary active">
+				    <input type="radio" name="options" id="option1" autocomplete="off"> BRCA
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option2" autocomplete="off"> HER2
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> Other known genetic mutations
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off" checked> No known genetic mutations
+				  </label>
+				</div>
+			</div>
+
+			<br/>
+			<div id="qs-cancer-type">
+				<p class='qs'>Are any of the following treatments underway or planned?</p>
+				<div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-primary active">
+				    <input type="radio" name="options" id="option1" autocomplete="off"> Chemotherapy
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option2" autocomplete="off"> Surgery
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off"> Radiation
+				  </label>
+				  <label class="btn btn-primary">
+				    <input type="radio" name="options" id="option3" autocomplete="off" checked> None
+				  </label>
+				</div>
+			</div>		
+
+			<br/>
+            <div class="checkbox">
+                <label><input type="checkbox" value="" id="termsCB" checked='true'>I accept the <a href="Terms.html" target='#'>
+                Terms and Conditions</a>&nbsp;</label>
+                <a href="#results-container">
+                	<button id="btn-submit" type="button" class="btn btn-success" onclick="submit()">Submit</button>
+                </a>
+            </div>	
+		</div>
+
+		<div id='results-container' class="container-fluid" style="display: none;">
+			
+			<div class="well well-lg well-results" id="final-results">
+				<p id='result-text'>Based on the information you submitted, the chance that you will live until at least October 2022 is:
+				</p>
+
+				<br/>
+				<br/>
+				<br/>
+				
+				<div id='result-text-percent'>
+					78%
+				</div>
+
+				<br/>
+				<br/>
+				<br/>
+				
+				<div id='result-text-footer'>
+					Note: This is based on SEERS data showing that 78% of people with the same characteristics you reported live at least 5 years after the date of diagnosis.
+				</div>
+			</div>
+			
+		</div>
+
+		
+		<div id='next-steps-container' class="container-fluid" style="display: none;"">			
+			<div class="well well-lg well-next-steps" id="next-steps">
+				<div class='next-steps-headers'>
+					What can you do to get better?
+				</div>
+				<div class='next-steps-text'>
+					Click <a href='https://www.webmd.com/cancer/default.htm' target='#'>here</a> to learn more about common treatments.
+				</div>
+				<br/>
+
+				<div class='next-steps-headers'>New treatments and clinical trials underway are:
+				</div>
+				<div class='next-steps-text'>
+					<table class="table table-striped table-bordered">
+					    <tbody>
+					      <tr>
+					        <td><a target="#"
+								href="https://www.centerwatch.com/clinical-trials/listings/external-studydetails.aspx?StudyID=NCT02675231">
+								<img src="./images/ucla.png" style="width:100px;height:50px;"></a></td>
+					        <td>Phase 2 trial of a new Eli Lilly drug combination (ademaciclib plus trastuzmab) for patients with HER-2 positive breast cancer: 29 months at UCLA and Bakersfield. Doesn’t reimburse travel.
+					    	</td>
+					      </tr>
+					      <tr>
+					        <td><a target="#"
+								href="https:her2climb.com">
+								<img src="./images/her2climb.png" style="width:100px;height:50px;"></a></td>
+					        <td>Cascadian Therapeutics is testing a new medication to target and inhibit growth of HER2+ cancer cells. Enrolling localized and metastatic. Meds can be taken at home so travel not needed.</td>
+					      </tr>
+					    </tbody>
+					</table>
+				</div>
+				<br/>
+
+				<div class='next-steps-headers'>Want more info or a second opinion?
+				</div>
+				<div class='next-steps-text'>
+					<a href='http://slack.com' target='#'>Click</a> to chat.
+				</div>
+
+			</div>
+			
+		</div>		
+	</div>
+</body>
+</html>
+
+
