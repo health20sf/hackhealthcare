@@ -1,0 +1,17 @@
+body {
+  margin: 0 auto !important;
+  max-width: 800px !important;
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+  font-family: sans-serif;
+}
+
+
+
+.flex{display: flex; margin: 20px;}
+
+
+.nugget { margin: 5px; }
+
+
+.border {border-right: 1px solid lightgrey;margin-right: 50px;}
