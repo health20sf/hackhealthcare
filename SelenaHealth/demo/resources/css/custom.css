@@ -1,0 +1,41 @@
+#forkme img {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 0;
+    z-index: 10000000000;
+    width: 15em;
+    opacity: 0.9;
+}
+
+.logo {
+    width: 1.3em;
+    height: 1.3em;
+    font-size: 1.3em;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0.2em;
+    border-radius: 50%;
+    color: white;
+    background-color: #FF2030;
+    float: left;
+    margin-right: 0.5em;
+    margin-top: -0.3em;
+}
+
+.navbar-brand {
+  color: black;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+#canvas {
+    font-size: larger;
+    margin-top: 50px;
+}
+
+#canvas .jumbotron {
+    background-color: white;
+}
