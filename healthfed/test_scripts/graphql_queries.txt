@@ -1,0 +1,47 @@
+query ObjDetectImageQuery($id:String!, $project:String!) {
+    objDetectImage(id: $id, project: $project) {
+        id
+        project
+        src
+        boundingBoxes {
+          	id
+            label
+            coords {
+                x
+                y
+                width
+                height
+            }
+        }
+    }
+  }
+
+query ObjDetectLabelOptQuery($project:String!) {
+    objDetectLabelOpts(project: $project) {
+        labels {
+          	value
+            color
+        }
+    }
+}
+
+mutation SaveObjDetectImage($id: String!, $project: String!, $bboxes: [BoundingBoxInput]) {
+	saveObjDetectImage(id: $id, project: $project, bboxes: $bboxes) {
+    id
+  }
+}
+
+{
+  "id": "testId",
+  "project": "testProject",
+  "bboxes": [{ 
+    "id": "sonoind",
+    "label": "audi",
+    "coords": {
+        "x": 145,
+        "y": 49,
+        "width": 124,
+        "height": 100 
+    }
+  }]
+}

@@ -1,0 +1,5 @@
+Name: COlin model
+Description: whats up
+Diseases: Blood
+Tissue: Genomic Sequence
+Dataset:None
