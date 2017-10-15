@@ -1,0 +1,41 @@
+/*--------------------*/
+/* wwww.AmazeMind.com
+/* 
+/* Saturday October 14, 2017
+/*--------------------*/
+body {
+  font-family: ProximaNovaReg, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+h3 {
+  color: #bb3794;
+}
+
+form {
+  height: 36px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+th {
+  text-align: left;
+}
+table {
+  font-size: 16px;
+}
+td,th {
+  height: 30px;
+  border-bottom: 3px dotted #d6d6d6;
+  padding-right: 20px;
+}
+a {
+    text-decoration: none; 
+}
+
+a, a:visited {
+    color: rgb(84, 180, 210);
+}
+
+a:hover {
+    color: rgb(51,159,192);
+}

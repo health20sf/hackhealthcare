@@ -1,0 +1,518 @@
+/*-----------------------*/
+/*  wwww.coogeeTech.com
+/*  by Hana Phung
+/*  January 5, 2010
+/*-----------------------*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+
+html { 
+	height: 100%;   
+	margin-bottom: 0; 
+}
+
+#horizontalBanner {
+   max-width: 2000px;
+   min-width: 1000px;
+   min-height: 189px;
+   margin: 0;
+   padding: 0;
+   /* background: url(../graphics/header-bg2000x119.jpg) no-repeat top left; */
+}
+
+#wrap {
+  width: 1000px; 
+  margin:0 auto;
+
+	background-color: #FFF;
+	background-repeat: repeat-x;
+	background-position: top left;
+	
+/*    background-image: url(../graphics/bg_body.bmp); */ 
+}
+
+#nav_container{
+	clear: both;
+	position:relative;
+	top: -3px;
+	position:relative;
+
+	height: 30px;
+	z-index:90;
+	
+	background-color: #F3E2DA;
+	text-decoration:none;
+	text-align:left;
+	border:#333333 thin;
+}
+
+
+
+/******************************/
+#main-body {
+	float: left;
+	width: 85%;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:none;
+	text-align:left;
+	margin-left: 10em;
+	margin-right: 0;
+	border-top-color: #333333;
+	border-right-color: #333333;
+	border-bottom-color: #333333;
+	border-left-color: #333333;
+	padding: 0;
+	margin-bottom: 10px;
+	font-style: normal;
+	background-color: #FFFFFF;
+}
+
+#sidebar {
+    background: #fff;
+		margin:0;
+		padding:0;
+}
+
+#content {
+	float: right;
+	width: 56%;
+	margin:0;
+	padding: 0;
+}
+
+#sidebar-2 {
+	float: right;
+	width: 29%;
+}
+
+
+/******************************/
+
+table {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	color: #000000;
+	height: 12.75px;
+	width: 97%;
+	padding: 0 0 0 0;
+	background: #FFFFFF;
+	border-top-style: none;
+	margin-left:1em;
+}
+
+table caption {
+	font-size: 1.3em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #122011;
+	padding-bottom: 0.4em;
+	padding-top: 0.4em;
+}
+
+table td {
+	margin: 0;
+	padding: 5px 8px;
+	text-align: left;
+	border-left-width: 0px;
+	border:none;
+	clear: both;
+}
+
+table .name {
+ text-align: left;
+}
+
+table .eventDate {
+ font-size: 1.3em;
+ padding: 10px 20px;
+ width: 100%;
+ text-align: left;
+ text-decoration: none;
+ color: #122011;
+}
+
+table .sponsorType {
+ font-size: 1.3em;
+ padding: 10px 20px;
+ width: 100%;
+ text-align: center;
+ text-decoration: none;
+ color: #122011;
+}
+
+table tr {
+ background: #fff;
+}
+
+table tr.alt_1 {
+ background: #B3E72A;
+ color:#9A2A16;
+}
+
+table tr.alt_2 {
+ background: #FEF7DD;
+}
+
+
+
+/************************/
+
+H1 {
+	font-size: 1.6em;
+	font: Arial, Helvetica, sans-serif;
+	top: 6pt;
+	border-top-width: 0.5em;
+	border-right-width: 5px;
+}
+
+
+p { 
+    font-family:Arial, Helvetica, sans-serif;
+    color:#000000;
+    text-decoration:none;
+}
+
+
+p a {
+  color: #135495;
+  text-decoration: underline;
+}
+
+p a:hover { 
+  color: #d7752d; 
+}
+
+
+.textlist li {
+	line-height: 1.3em;
+	list-style-position: outside;
+	list-style-type: disc;
+	margin: 0 0 5px 0;
+	padding: 0 0 0 0;
+}
+
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+    clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+.attached {
+	font-weight: bold;
+	text-align: center;
+}
+
+.topbar { 
+	padding-top: 5px;
+	text-align: right; 
+	height: 0px; 
+}
+
+/******************************/
+
+/* Begin main navigation */
+
+#mainnav {
+	clear: both;
+	position:relative;
+	top:-3px;
+	/* width:69.2em; */
+	height: 35px;
+	z-index:400;
+	font-size: small;
+	text-transform:none;
+	background-color: #F3E2DA;
+	padding-top: 0;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 0;
+}
+
+/* begin drop down styling */	
+
+#mainnav ul 	{
+	margin: 0; 
+	padding: 0; 
+	list-style: none;
+}
+
+#mainnav ul li 	{
+	margin: 0;
+	padding-top: 0;
+	float: right;
+	position: relative;
+	text-align: right;
+	color: #FFF;
+	line-height: 32px;
+	list-style-image: none;
+	list-style-type: none;
+	background-color: #F3E2DA;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#mainnav ul li a {
+	color: #122011;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0 10px;
+	height: 32px;
+	line-height: 32px;
+} 
+
+#mainnav ul li a:hover {
+	color: #f37b1e;
+	text-decoration: underline;
+	list-style-image: none;
+} 
+
+#mainnav ul li.on a {color:#cc0104;} 
+
+/* end drop down styling */	
+
+/* End main navigation */	
+
+
+/******************************/
+
+#copyright {
+	padding-left: 11px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	color: #000;
+	margin: 0 0 0.2em 0;
+}
+
+div#copyright a { 
+	font-size: 85%;
+	color: #007CAF;;
+	text-decoration: none;
+}
+
+
+div#copyright a:hover { 
+	font-size: 85%;
+	color: #666; 
+	text-decoration: none;
+}
+
+
+
+
+
+/******************************/
+
+/* Indestrucible box */
+
+.container {
+  float: right;     /* override this default value in your HTML file */
+  margin: 0px 0;    /* override this default value in your HTML file */
+  /*width: 42%;*/   /* override this default value in your HTML file */
+  padding: 0 0 0 0; /* override this default value in your HTML file */
+  background: url(../graphics/rounded-upper-right.gif) top right no-repeat;
+  font-size: 93%;
+  } 
+  
+.container .desc {
+	margin: 0;
+	padding: 9px 9px 3px 9px;
+	border-bottom: 1px solid #E0CFAB;
+	background: url(../graphics/rounded-upper-left.gif) top left no-repeat;
+	font-size: larger;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align: center;
+  }
+
+.container .link {
+  margin: 0;
+  padding: 0 0 0 6px;
+  background: url(../graphics/rounded-lower-left.gif) bottom left no-repeat;
+  }
+
+
+  
+.container .link em {
+  display: block;
+  padding: 0 3px 3px 0;
+  text-align: center;
+  font-style: normal;
+  background: url(../graphics/rounded-lower-right.gif) bottom right no-repeat;
+  }
+
+.container h3 {
+  color: #82952C;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  }
+
+
+.container h3 a {
+  color: #627081;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: larger;
+  text-decoration: none;
+  }
+  
+.container p.link {
+  line-height: 120%;
+  text-align: center;
+  vertical-align: middle;
+  }
+
+
+.container p.link img {
+  text-align: center;
+  padding: 5px;
+  }
+
+.container p.link a {
+  color: #0000CC;
+  text-decoration: underline;
+  }
+
+
+.container p.link a:hover { 
+  color: #007CAF; 
+  text-decoration: underline;
+}
+
+/* Indestrucible box (purple color) */
+
+.container_purple {
+  float: right;     /* override this default value in your HTML file */
+  margin: 0px 0;    /* override this default value in your HTML file */
+  /*width: 42%;*/   /* override this default value in your HTML file */
+  padding: 0 0 0 0; /* override this default value in your HTML file */
+  background: url(../graphics/rounded-upper-right_purple.gif) top right no-repeat;
+  font-size: 93%;
+  } 
+
+.container_purple .desc {
+	margin: 0;
+	padding: 9px 9px 3px 9px;
+	border-bottom: 1px solid #E0CFAB;
+	background: url(../graphics/rounded-upper-left_purple.gif) top left no-repeat;
+	font-size: larger;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align: center;
+  }
+
+.container_purple .link {
+  margin: 0;
+  padding: 0 0 0 6px;
+  background: url(../graphics/rounded-lower-left_purple.gif) bottom left no-repeat;
+  }
+
+.container_purple .link em {
+  display: block;
+  padding: 0 3px 3px 0;
+  text-align: center;
+  font-style: normal;
+  background: url(../graphics/rounded-lower-right_purple.gif) bottom right no-repeat;
+  }
+
+.container_purple h3 {
+  color: #82952C;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  }
+
+.container_purple h3 a {
+  color: #627081;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: larger;
+  text-decoration: none;
+  }
+  
+.container_purple p.link {
+  line-height: 120%;
+  text-align: center;
+  vertical-align: middle;
+  }
+
+.container_purple p.link img {
+  text-align: center;
+  padding: 5px;
+  }
+
+.container_purple p.link a {
+  color: #6C7A7D;
+  text-decoration: none;
+  }
+
+.container_purple a:hover { 
+  color: #f37b1e; 
+  text-decoration: underline;
+}
+
+
+/******************************/
+
+#aboutUs {
+  	float: left;
+  	width: 880px;
+  	padding: 0 0 0 0;
+  	background: url(img/bg.gif) no-repeat top left;
+  	}
+#aboutUs dl {
+  	float: left;
+  	width: 98%;
+  	margin: 0px 0px;
+  	padding: 0;
+  	display: inline; /* fixes IE/Win double margin bug */
+  	}
+	
+#aboutUs dt {
+  	float: right;
+  	width: 582px;
+  	margin: 0;
+  	padding: 10px 5px 0 0;
+  	font-size: 130%;
+  	letter-spacing: 1px;
+  	color: #112212;
+  	}
+	
+#aboutUs dd {
+    margin: 0 0 0 270px;
+  	padding: 10px 5px;
+  	font-size: 85%;
+  	line-height: 1.5em;
+  	color: #666;
+  	}
+	
+#aboutUs dl dd.img {
+	margin-left: 10px;
+   	}
+#aboutUs dd.img img {
+  	float: left;
+  	margin: 0 0px 0 0;
+  	padding: 0px;
+  	border: 1px solid #D9E0E6;
+  	border-bottom-color: #C8CDD2;
+  	border-right-color: #C8CDD2;
+  	background: #fff;
+  	}
+
+#aboutUs a { 
+	color: #112212;
+	text-decoration: none;	
+}
+
+#aboutUs a:hover { 
+	color: #f37b1e; 
+	text-decoration: underline;
+}
+
+

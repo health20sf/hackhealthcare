@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Myself-Health</title>
+		<meta name="viewport" content="width= device-width, initial-scale= 1.0">
+		<link href="css/carRoom_v1.css" rel="stylesheet" type="text/css" media="screen" /> 
+		<link href="css/bootstrap.min.css" rel= "stylesheet">
+		<link href="css/styles.css" rel= "stylesheet">
+		
+		
+		
+  <link href="css/hackHealthcare.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+  
+   <script type="text/javascript">
+   var api_key = 'CODE_SAMPLES_KEY_9d3608187'; // Get your API key at developer.betterdoctor.com
+var resource_url = 'https://api.betterdoctor.com/2016-03-01/conditions?user_key=' + api_key;
+$.get(resource_url, function (data) {
+    // data: { meta: {<metadata>}, data: {<array[Condition]>} }
+    
+    var template = Handlebars.compile(document.getElementById('conditions-template').innerHTML);
+    document.getElementById('content-placeholder').innerHTML = template(data);
+});
+   </script>
+
+
+	</head>
+
+	<body>
+
+		<div class= "navbar navbar-inverse navbar-static-top">
+		  <div class = "container">
+		     <a href= "index.htm" class="img-responsive">
+			 <img src="img/myselfHealth.png" alt="Myself Health" WIDTH="27%" VSPACE="10em" HSPACE="2em" BORDER="0" align=left>
+			 </a> 
+			
+			 <button class= "navbar-toggle" data-toggle= "collapse" data-target= ".navHeaderCollapse">
+				<span class= "icon-bar"></span>
+				<span class= "icon-bar"></span>
+				<span class= "icon-bar"></span>
+			  </button>
+			 <div class= "collapse navbar-collapse navHeaderCollapse">  
+				<ul class= "nav navbar-nav navbar-right">
+					<li class="active"><a href= "services.htm">Log In</a></li>
+					<li><a href= "forums.htm">Forums</a></li>
+					<li class= "dropdown">
+						<a href= "customers.htm" class= "dropdown-toggle" data-toggle= "dropdown">Create/Join Trials<b class = "caret"></b></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+<li>
+    <a tabindex="-1" href="sf.htm">Trial San Francisco</a>
+</li>
+<li>
+    <a tabindex="-1" href="ha.htm">Trial Los Angeles</a>
+</li>
+
+<li class="divider"></li>
+<li>
+    <a tabindex="-1" href="faq.htm">Frequently Asked Questions</a>
+</li>
+</ul>
+					<li class= "dropdown">
+						<a href= "about.htm" class= "dropdown-toggle" data-toggle= "dropdown">Find a Doctor<b class = "caret"></b></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+<li>
+    <a tabindex="-1" href="about.htm">Find a Doctor</a>
+</li>
+<li>
+    <a tabindex="-1" href="contact.htm">Contact Us</a>
+</li>
+</ul>
+				</ul>
+			 <div>
+		  </div>
+		</div>
+		
+<div class = "container">
+	<h3>Create a Trial</h3>
+	<p style="font-size:20px" class ="navbar-text pull-left" align ="left" margin = "0 0 0 0">	
+Conditions:
+<div id="content-placeholder"></div>
+<script id="conditions-template" type="text/x-handlebars-template">
+    <form margin = "1em 0 0 0">
+        <select name="Conditions">
+        {{#data}}
+			<option value={{name}}>{{name}}</option>         
+        {{/data}}
+        </select>
+    </form>
+</script>
+	</br>
+	</p>
+
+	<p style="font-size:20px" class ="navbar-text pull-left" align ="left" margin = "0 0 0 0">	
+Experiment:
+<div id="content-placeholder"></div>
+
+        <select name="Experiment">
+			<option value="diet">diet</option>  
+			<option value="supplement">supplement</option>         
+			<option value="medical_rx">medical_rx</option>         
+			<option value="medical_otc">medical_otc</option>         
+			<option value="fitness">fitness</option>   
+			<option value="fitness">lifestyle</option> 
+			<option value="fitness">physical therapy</option> 			
+        </select>
+	</br>
+	</br>
+	</p>	
+	
+<p style="font-size:20px" class ="navbar-text pull-left" align ="left" margin = "0 0 0 0">	
+<b>Specifics:</b> Vegetarian vs. Standard American Diet
+<br><br><b>Description:</b> 1 month on each diet
+<br><br><b>Control:</b> Standard American Diet
+<br><br><b>KPI:</b> Weight gain or loss
+<br>
+</p>	
+</div>
+				
+		<div id = "myCarousel" class = "carousel">
+		<ol class = "carousel-indicators">
+			<li data-target = "#myCarousel" data-slide-to = "0" class = "active"></li>
+			<li data-target = "#myCarousel" data-slide-to = "1"></li>	
+			<li data-target = "#myCarousel" data-slide-to = "2"></li>				
+		</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+				    <img src = "img/myselfHealth_1.png" alt ="Myself Health" class="img-responsive">
+				</div>
+				<div class="item">
+					<img src = "img/myselfHealth_1.png" alt ="Myself Health" class="img-responsive">
+				</div>
+				<div class="item">
+					<img src = "img/myselfHealth_1.png" alt ="Myself Health" class="img-responsive">
+				</div>
+			</div>
+			
+			<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+				<span class="icon-prev"></span>
+			</a>
+			
+			<a class="carousel-control right" href="#myCarousel" data-slide="next">
+				<span class="icon-next"></span>
+			</a>
+		</div>
+
+		
+<div class = "container">
+	<p style="font-size:20px" class ="navbar-text pull-left" align ="left" margin = "0">
+	
+	<br>
+</div>
+
+<div id="copyright" align="center">
+<a href="index.htm"  title="Welcome to Phil Robinson Earth Moving" target="_parent">
+<font color="#999999">Find us on </font>
+ <img src="img/facebook.png" alt="RobinsonEarthMoving.com.au" WIDTH="3%" VSPACE="0" HSPACE="0" BORDER="0">&nbsp; &nbsp; 
+<a href="direction.htm"  title="Visit Phil Robinson Earthmoving" target="_parent">Driving Directions</a>
+
+<br class="clearfloat" />
+</br><font color="#999999">Copyright &copy; MMXVII</font>
+<a href="index.htm" title="Myself Health" target="_parent">Myself.Health</a>&nbsp; &nbsp;<font color="#999999">All Rights Reserved.
+</font>
+
+</div>
+		
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>
